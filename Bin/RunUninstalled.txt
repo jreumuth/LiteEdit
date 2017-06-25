@@ -1,0 +1,3 @@
+This presence of this file causes Lite Edit to load the config file and the language files from the folder of Lite Edit.exe (or a Languages subfolder) instead of from system folders. This is useful when running Lite Edit from a portable device instead of as an installed program. The Lite Edit installer does not install this file.
+
+For instructions on using Lite Edit from a portable device, such as a USB drive, in Lite Edit see Help >> Contents >> Miscellaneous Features >> Installing Onto Portable Device.
