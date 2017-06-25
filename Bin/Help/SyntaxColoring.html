@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Lite Edit Help - Configuring Syntax Coloring</title>
+</head>
+<body>
+
+<h3>Configuring Syntax Coloring</h3>
+
+You customize syntax coloring in the <b>Languages</b> tab of the
+<b>Options>>Syntax Coloring</b> dialog box. Programming languges can be
+broken up into the following elements: keywords, symbols, comments, and
+strings. For each language, you add language elements to it using the
+<b>Add</b> button in the <b>Language Elements</b> group box. Then you
+configure each language element.
+<p>
+<u>Configuring Keywords</u>
+<p>
+Choose <b>Words</b> in the <b>Define Element As</b> combo box.
+Choose <b>Keyword</b> in the <b>Kind</b> combo box.
+Enable the <b>Whole Word</b> option. Fill out the list of keywords
+in the <b>Word List</b> edit box. Use new lines to separate keywords.
+<p>
+<u>Configuring Symbols</u>
+<p>
+Choose <b>Words</b> in the <b>Define Element As</b> combo box.
+Choose <b>Symbol</b> in the <b>Kind</b> combo box.
+Disable the <b>Whole Word</b> option. Fill out the list of symbols
+in the <b>Word List</b> edit box. Use new lines to separate symbols.
+<p>
+<u>Configuring Comments</u>
+<p>
+There are two kinds of comments: comments that end at the end of a line
+and comments that end at an ending marker.
+<p>
+To configure a comment that ends at the
+end of the line, choose <b>Rest Of Line</b> in the <b>Define Element As</b>
+combo box.
+Choose <b>Comment</b> in the <b>Kind</b> combo box.
+Enter the <b>Start Marker</b> for the comment. If the start
+marker is an identifier, such as REM, enable the <b>Whole Word</b> option.
+If the start marker is <em>not</em> an identifier, such as //, disable the <b>Whole Word</b>
+option.
+<p>
+To configure a comment that ends at an ending comment marker, choose
+the <b>Range</b> option in the <b>Define Element As</b> combo box.
+Choose <b>Comment</b> in the <b>Kind</b> combo box.
+Enter the <b>Start Marker</b> and the <b>End Marker</b> and enable the
+<b>Span Lines</b> option. Enable the <b>Allow Nesting</b> option if the
+programming language allows comments to be nested.
+<p>
+<u>Configuring Strings</u>
+<p>
+Choose the <b>Range</b> option in the <b>Define Element As</b> combo box.
+Choose <b>String</b> in the <b>Kind</b> combo box.
+Enter the <b>Start Marker</b> and the <b>End Marker</b> for the string.
+<p>
+Languages often use an escape character to provide a way to specify the
+start and ending marker
+of the string in the string itself. For example, in a C string whose
+start and end marker is a ", you can specify a " in the string with
+\". In this example, \ is an escape character for ". Enter any escape character in the
+<b>Escape Char</b> field.
+<p>
+A programming language may have other elements that you may want to
+classify as a keyword, symbol, comment, or string. For instance, if
+a language has a character data type, you may define a language element
+for character constants in the same way you define a language element
+for strings constants.
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Lite Edit Help - Creating Tools</title>
+</head>
+<body>
+
+<h3>Creating Tools</h3>
+
+You create new tools in the <b>Tools>>Edit Tools</b> dialog box.
+<p>
+You may specify a <b>Command</b> without a full path. For example,
+you may specify a command to launch notepad by using notepad.exe
+instead of C:\WINDOWS\System32\notepad.exe.
+If the command does not have an absolute path, Lite Edit searches
+for the command in the following directories:
+<ol>
+<li>The directory of LiteEdit.exe.
+<li>The 32-bit Windows system directory if one exists. This is typically C:\WINDOWS\system32.
+<li>The 16-bit Windows system directory. This is typically C:\WINDOWS\system.
+<li>The current Windows directory.
+<li>The directories in the PATH environment variable.
+</ol>
+<p>
+You may enter environment variables and any of the following macros
+for the <b>Command</b>, <b>Paramters</b>, and <b>Initial directory</b>.
+<p>
+<table border>
+<tr>
+	<th>Macro
+	<th>Definition
+	<th>Example (open file is C:\Folder\File.txt)
+<tr>
+	<td>%FilePath%
+	<td>The full path of the currently opened file
+	<td>C:\Folder\File.txt
+<tr>
+	<td>%FileDir%
+	<td>The directory of the currently opened file with trailing backslash
+	<td>C:\Folder\
+<tr>
+	<td>%FileName%
+	<td>The file name of the currently opened file without extension
+	<td>File
+<tr>
+	<td>%FileExt%
+	<td>The file extension of the currently opened file
+	<td>txt
+<tr>
+	<td>%CurDir%
+	<td>The current windows directory
+	<td>N/A
+<tr>
+	<td>%LineNum%
+	<td>The one based line number of the caret
+	<td>N/A
+<tr>
+	<td>%ColNum%
+	<td>The one based horizontal position of the caret
+	<td>N/A
+<tr>
+	<td>%SelText%
+	<td>The selected text
+	<td>N/A
+<tr>
+	<td>%SelStart%
+	<td>The zero based index of the start of the selection, or the index of the caret if there is no selection
+	<td>N/A
+<tr>
+	<td>%SelEnd%
+	<td>The zero based index of the end of the selection, or the index of the caret if there is no selection
+	<td>N/A
+<tr>
+	<td valign = top>%Prompt:&lt;prompt message&gt;%
+	<td>Prompts you for input when the command executes and replaces this macro with the text you enter at the prompt.
+		The prompt dialog box displays the &lt;prompt message&gt;. The &lt;prompt message&gt; may use the following
+		escaped characters:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;\n = new line<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;\t = tab<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;\\ = back slash<br>
+	<td>N/A
+</table>
+<p>
+Below the <b>Command</b>, <b>Paramters</b>, and <b>Initial directory</b>,
+Lite Edit gives you a preview of the result of the environment variable and
+macro substitution for the currently opened file.
+<p>
+When specifying <b>Parameters</b>, if an environment variable or
+macro expands to a string with spaces, you must enclose the environment
+variable or macro in quotes (e.g. "%FilePath%") to ensure that it gets
+passed as one parameter. You should <em>not</em> enclose the <b>Command</b> or
+<b>Initial directory</b> in quotes.
+<p>
+Sometimes you
+may need to do more to run an external program than you can do in the <b>Edit Tools</b>
+dialog box. For example, you want to execute DOS commands such as pause or set
+when the program executes. You can do this by creating a batch file that runs the
+program and specifying the batch file as the <b>Command</b> in the
+<b>Edit Tools</b> dialog box.
+<hr>
+<h4>Filters: tools that modify the current selection</h4>
+<p>
+The command can modify the selected text if you enable the <b>Command is a filter</b> option.
+A filter is a program that reads text from standard input and writes text to standard output.
+When you enable the <b>Command is a filter</b> option, Lite Edit passes the selected text
+to the command through standard input. Then Lite Edit replaces the selected text with the text
+that the command writes to standard output.
+<p>
+Filter Examples:
+<ul>
+	<li>Follow these steps to create a tool that sorts the selected lines of text:
+		<ul>
+			<li>Open the <b>Edit Tools</b> dialog box through <b>Tools>>Edit Tools</b>
+			<li>Press <b>Add</b> to create a new tool menu item
+			<li>Set the <b>Command</b> to sort.exe
+			<li>Delete the <b>Parameters</b>, leaving this field empty
+			<li>Enable the <b>Command is a filter</b> option
+			<li>Press <b>OK</b>
+		</ul>
+	<!--
+	<li>Create a tool menu item using a command interpreter, such as cmd.exe or command.com,
+		as the <b>Command</b>. Use /c time /t as the <b>Parameters</b>. Enable the
+		<b>Command is a filter</b> option. This tool insert the current time by executing
+		the DOS time command. /c specifies that the
+		command interpreter quits after executing the command. /t specifies that the time DOS
+		command doesn't prompt you to input a new time.
+	-->
+	<!--
+	<li>TEXTools is a pipe-based
+		text-processing workbench that allows you to morph text into other forms by combining
+		filters. You can use TEXTools Command Line (TCL) as a filter in Lite Edit. See
+		<a href = http://www.fireflysoftware.com target = _blank>http://www.fireflysoftware.com</a>
+		for more information.
+	-->
+	<li><a href = https://github.com/bblock/Pyper/downloads target = _blank>Pyper</a>,
+		formerly known as TEXTools, is a pipe-based
+		text-processing workbench that allows you to morph text into other forms by combining
+		filters. You can use Pyper Command Line (PCL) as a filter in Lite Edit.
+</ul>
+
+</body>
+</html>

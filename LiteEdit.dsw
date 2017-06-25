@@ -1,0 +1,116 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AllProjects"=".\AllProjects\AllProjects.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name UninstallerCaller
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Setup
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Uninstall
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Framework
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name LiteEdit
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Framework"=".\Framework\Framework.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "LiteEdit"=".\LiteEditApp\LiteEdit.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Framework
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Setup"=".\Setup\Setup.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Framework
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Uninstall"=".\Uninstall\Uninstall.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Framework
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UninstallerCaller"=".\UninstallerCaller\UninstallerCaller.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Framework
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
